@@ -3,12 +3,11 @@ import 'package:xzdart_solutions/src/exercise_levels.dart';
 import 'package:xzdart_solutions/src/exercises/hello_world_exercise.dart';
 
 void main() {
-
-  group('Hello World Exercise', (){
-
+  group('Hello World Exercise', () {
     late HelloWorldExercise helloWorldExercise;
     const expectedTitle = 'Hello World';
-    const expectedInstruction = 'Write a function that returns the string "Hello, world!".';
+    const expectedInstruction =
+        'Write a function that returns the string "Hello, world!".';
     const expectedDescription = '''
 The classical introductory exercise. Just say "Hello, World!".
 
@@ -23,11 +22,11 @@ If everything goes well, you will be ready to fetch your first real exercise.
 ''';
     const expectedOutput = 'Hello, World!';
 
-    setUpAll((){
+    setUpAll(() {
       helloWorldExercise = HelloWorldExercise();
     });
 
-    test('Title', (){
+    test('Title', () {
       expect(expectedTitle, helloWorldExercise.title);
     });
 
@@ -45,9 +44,5 @@ If everything goes well, you will be ready to fetch your first real exercise.
     test('Hello world exercise output', () {
       expect(expectedOutput, helloWorldExercise.solution());
     });
-
   });
-
-
-
 }

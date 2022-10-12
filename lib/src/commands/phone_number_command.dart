@@ -1,6 +1,6 @@
 import 'package:args/command_runner.dart';
 
-class PhoneNumberCommand extends Command{
+class PhoneNumberCommand extends Command {
   @override
   String get description => '''
 Clean up user-entered phone numbers so that they can be sent SMS messages.
@@ -52,5 +52,4 @@ dynamic hello(int a){
 
   @override
   String get name => 'phone-number';
-
 }

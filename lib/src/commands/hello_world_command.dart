@@ -1,10 +1,8 @@
-import 'package:args/command_runner.dart';
 import 'package:xzdart/src/commands/base_command.dart';
 import 'package:xzdart_solutions/xzdart_solutions.dart';
 
 class HelloWorldCommand extends BaseCommand {
-
-  HelloWorldCommand(): super(exercise: HelloWorldExercise());
+  HelloWorldCommand() : super(exercise: HelloWorldExercise());
 
   @override
   String get name => 'hello-world';
@@ -13,7 +11,7 @@ class HelloWorldCommand extends BaseCommand {
   String get invocation => 'xzdart hello-world';
 
   @override
-  void run(){
+  void run() {
     print((exercise as HelloWorldExercise).solution());
   }
 }

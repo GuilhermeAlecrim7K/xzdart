@@ -1,8 +1,6 @@
 import 'package:xzdart_solutions/src/base_exercise.dart';
 
-enum ExerciseLevels {
-  easy, medium, hard
-}
+enum ExerciseLevels { easy, medium, hard }
 
 mixin LevelEasy on BaseExercise {
   @override
