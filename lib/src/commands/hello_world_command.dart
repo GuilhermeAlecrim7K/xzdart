@@ -1,20 +1,19 @@
 import 'package:args/command_runner.dart';
+import 'package:xzdart/src/commands/base_command.dart';
+import 'package:xzdart_solutions/xzdart_solutions.dart';
 
-class HelloWorldCommand extends Command {
-  @override
-  String get description => '''
-The classical introductory exercise. Just say "Hello, World!".
+class HelloWorldCommand extends BaseCommand {
 
-"Hello, World!" is the traditional first program for beginning programming in a new language or environment.
-
-The objectives are simple:
-
-Write a function that returns the string "Hello, World!".
-Run the test suite and make sure that it succeeds.
-Submit your solution and check it at the website.
-If everything goes well, you will be ready to fetch your first real exercise.
-''';
+  HelloWorldCommand(): super(exercise: HelloWorldExercise());
 
   @override
   String get name => 'hello-world';
+
+  @override
+  String get invocation => 'xzdart hello-world';
+
+  @override
+  void run(){
+    print((exercise as HelloWorldExercise).solution());
+  }
 }
