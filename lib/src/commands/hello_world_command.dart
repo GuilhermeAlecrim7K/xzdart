@@ -11,6 +11,9 @@ class HelloWorldCommand extends BaseCommand {
   String get invocation => 'xzdart hello-world';
 
   @override
+  bool get takesArguments => false;
+
+  @override
   void run() {
     print((exercise as HelloWorldExercise).solution());
   }
