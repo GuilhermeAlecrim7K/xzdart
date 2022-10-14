@@ -18,6 +18,10 @@ abstract class BaseCommand extends Command {
 
   @override
   String get invocation => 'xzdart $name [arguments]';
+
+  @override
+  String get category => exercise.level.name.capitalized();
+
 }
 
 extension _Capitalizer on String {
