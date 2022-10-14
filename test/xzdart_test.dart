@@ -2,7 +2,6 @@ import 'package:xzdart/main.dart';
 import 'package:test/test.dart';
 
 void main() {
-
   final XzDartCommand xzdartCommandRunner = XzDartCommand();
 
   group('Commands', () {
@@ -12,7 +11,7 @@ void main() {
       expect(xzdartCommands.length, 38);
     });
 
-    test('set', (){
+    test('set', () {
       expect(xzdartCommands.keys.toSet(), {
         'help',
         'acronym',
@@ -52,23 +51,20 @@ void main() {
         'triangle',
         'two-fer',
         'word-count',
-      }
-      );
+      });
     });
-
   });
 
-  group('CommandRunner properties', (){
-
-    test('description', (){
-      expect(xzdartCommandRunner.description, 'Solutions to Exercism\'s Dart exercises');
+  group('CommandRunner properties', () {
+    test('description', () {
+      expect(xzdartCommandRunner.description,
+          'Solutions to Exercism\'s Dart exercises');
     });
-    test('executableName', (){
+    test('executableName', () {
       expect(xzdartCommandRunner.executableName, 'xzdart');
     });
-    test('invocation', (){
+    test('invocation', () {
       expect(xzdartCommandRunner.invocation, 'xzdart <command> [arguments]');
     });
-
   });
 }
