@@ -21,7 +21,6 @@ abstract class BaseCommand extends Command {
 
   @override
   String get category => exercise.level.name.capitalized();
-
 }
 
 extension _Capitalizer on String {
