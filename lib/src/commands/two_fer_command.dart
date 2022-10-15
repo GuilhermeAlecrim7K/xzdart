@@ -14,10 +14,11 @@ class TwoFerCommand extends BaseCommand {
   @override
   void run() {
     var args = argResults?.rest;
-    if (args != null && args.length != 1) {
+    if (args != null && args.length > 1) {
       throw UsageException(
           "This exercise mandatorily takes one argument", usage);
     }
-    print((exercise as TwoFerExercise).solution(args?[0]));
+    print((exercise as TwoFerExercise)
+        .solution(args!.isNotEmpty ? args[0] : null));
   }
 }

@@ -25,10 +25,6 @@ void main() {
   });
 
   group('run', () {
-    test('No args provided', () {
-      expectLater(
-          commandRunner.run(['two-fer']), throwsA(isA<UsageException>()));
-    });
     test('More than 1 arg provided', () {
       expectLater(commandRunner.run(['two-fer', 'arg1', 'arg2']),
           throwsA(isA<UsageException>()));
