@@ -4,5 +4,6 @@ abstract class BaseExercise {
   String get title;
   String get instruction;
   String get description;
+  String? examples;
   ExerciseLevels get level;
 }
