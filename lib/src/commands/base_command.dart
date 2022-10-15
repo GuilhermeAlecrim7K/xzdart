@@ -7,10 +7,17 @@ abstract class BaseCommand extends Command {
   BaseCommand({required this.exercise});
 
   @override
-  String get description => '${exercise.title.toUpperCase()}\n\n'
-      'Level: ${exercise.level.name.capitalized()}\n\n'
-      'Task: ${exercise.instruction}\n\n'
-      'Description:\n${exercise.description}';
+  String get description {
+    var examples = '';
+    if (exercise.examples != null) {
+      examples = '\nExamples:\n${exercise.examples}';
+    }
+    return '${exercise.title.toUpperCase()}\n\n'
+        'Level: ${exercise.level.name.capitalized()}\n\n'
+        'Task: ${exercise.instruction}\n\n'
+        'Description:\n${exercise.description}'
+        '$examples';
+  }
 
   @override
   String get summary =>
