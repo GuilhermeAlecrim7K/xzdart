@@ -3,7 +3,7 @@ import 'package:xzdart_solutions/src/exercise_levels.dart';
 import 'package:xzdart_solutions/src/exercises/two_fer_exercise.dart';
 
 void main() {
-    final TwoFerExercise twoFerExercise = TwoFerExercise();
+  final TwoFerExercise twoFerExercise = TwoFerExercise();
   group('Properties', () {
     const expectedTitle = 'Two Fer';
     const expectedInstruction =
@@ -23,20 +23,23 @@ One for you, one for me.
 ''';
 
     test('Title', () {
-      expect(expectedTitle, twoFerExercise.title);
+      expect(twoFerExercise.title, expectedTitle);
     });
 
     test('Instruction', () {
-      expect(expectedInstruction, twoFerExercise.instruction);
+      expect(twoFerExercise.instruction, expectedInstruction);
     });
     test('Description', () {
-      expect(expectedDescription, twoFerExercise.description);
+      expect(twoFerExercise.description, expectedDescription);
     });
 
     test('Level', () {
-      expect(ExerciseLevels.easy, twoFerExercise.level);
+      expect(twoFerExercise.level, ExerciseLevels.easy);
     });
 
+    test('Examples', () {
+      expect(twoFerExercise.examples!.isEmpty, false);
+    });
   });
 
   group('Solution', () {
