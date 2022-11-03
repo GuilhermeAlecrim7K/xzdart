@@ -5,3 +5,4 @@ export 'src/exercises/two_fer_exercise.dart';
 export 'src/exercises/leap_exercise.dart';
 export 'src/exercises/scrabble_score_exercise.dart';
 export 'src/exercises/armstrong_numbers_exercise.dart';
+export 'src/exercises/difference_of_squares_exercise.dart';
